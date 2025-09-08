@@ -30,7 +30,11 @@ export default function AuthForm() {
           <p className="text-sm text-red-500 font-semibold">{state.error}</p>
         )}
       </div>
-      <ButtonPrimary color="indigo" isPending={isPending}>
+      <ButtonPrimary
+        color="indigo"
+        isPending={isPending}
+        buttonShadow="button-shadow-login"
+      >
         Submit
       </ButtonPrimary>
     </form>

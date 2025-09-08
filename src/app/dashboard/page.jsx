@@ -8,7 +8,9 @@ export default function Dashboard() {
       <div className="flex flex-col items-center">
         <Welcome />
         <form action={logout} className="w-24">
-          <ButtonPrimary color="red">Logout</ButtonPrimary>
+          <ButtonPrimary color="red" buttonShadow="button-shadow-logout">
+            Logout
+          </ButtonPrimary>
         </form>
       </div>
     </main>

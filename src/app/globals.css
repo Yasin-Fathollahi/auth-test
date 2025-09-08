@@ -1,8 +1,17 @@
 @import 'tailwindcss';
 
-@utility button-shadow {
-  box-shadow: 0 8px 0 0 #312c85;
+@layer utilities {
+  .button-shadow-login {
+    box-shadow: 0 8px 0 0 #312c85;
+  }
+
+  .button-shadow-logout {
+    box-shadow: 0 8px 0 0 #8b0836;
+  }
 }
+/* @utility button-shadow-login {
+  box-shadow: 0 8px 0 0 #312c85;
+} */
 
 /* HTML: <div class="loader"></div> */
 .loader {
