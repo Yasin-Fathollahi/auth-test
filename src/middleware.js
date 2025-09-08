@@ -8,7 +8,6 @@ export async function middleware(request) {
 
   if (request.nextUrl.pathname === '/dashboard') {
     const cookie = request.cookies.get('isLoggedIn');
-    console.log('🚀 ~ middleware.js:13 ~ middleware ~ cookie:', cookie);
 
     if (!cookie) {
       url.pathname = '/auth';

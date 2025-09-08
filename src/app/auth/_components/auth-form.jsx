@@ -1,8 +1,11 @@
-'use client';
 import { useActionState } from 'react';
 import { login } from '@/actions';
+import ButtonPrimary from '@/components/button-primary';
 export default function AuthForm() {
-  const [state, formAction, isPending] = useActionState(login, { error: null });
+  const [state, formAction, isPending] = useActionState(login, {
+    error: null,
+    data: null,
+  });
 
   if (state.data) {
     localStorage.setItem('user', JSON.stringify(state.data));
@@ -17,6 +20,7 @@ export default function AuthForm() {
         <input
           type="number"
           id="phone"
+          name="phone"
           placeholder="09xxx, +98xxx, 00989xxx"
           required
           className="border-2 border-indigo-200 px-4 py-2 rounded-lg placeholder:text-sm focus:outline-indigo-400"
@@ -26,15 +30,9 @@ export default function AuthForm() {
           <p className="text-sm text-red-500 font-semibold">{state.error}</p>
         )}
       </div>
-      <div className="relative">
-        <div className="absolute button-shadow w-full h-10 rounded-lg -translate-y-1"></div>
-        <button
-          disabled={isPending}
-          className="transition-all hover:cursor-pointer active:bg-indigo-600 inline-block w-full h-10 bg-indigo-500 text-white rounded-lg -translate-y-1 active:translate-y-1 duration-75"
-        >
-          {!isPending ? 'Submit' : <div className="loader mx-auto" />}
-        </button>
-      </div>
+      <ButtonPrimary color="indigo" isPending={isPending}>
+        Submit
+      </ButtonPrimary>
     </form>
   );
 }
