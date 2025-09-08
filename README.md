@@ -28,20 +28,6 @@ Users can **log in** and **log out**, with state handled by both localStorage (f
 - **React**  
 - **Tailwind CSS** (for styling)  
 
----
-
-## 📂 Project Structure
-
-│── src/
-│ ├── app/
-│ │ ├── auth/ # Login page
-│ │ │ └── _components/ # Auth form components
-│ │ └── dashboard/ # Dashboard page
-│ ├── utils/
-│ │ └── validation.js # Phone number validation helper
-│ └── assets/ # SVG and static assets
-│── package.json
-│── README.md
 
 ---
 
