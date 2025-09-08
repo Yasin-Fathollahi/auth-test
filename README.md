@@ -56,8 +56,6 @@ Install dependencies
 ```bash
 npm install
 or if you use Yarn:
-
-Copy code
 yarn install
 Run the development server
 
